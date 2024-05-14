@@ -8,26 +8,42 @@ class ItemsCard extends StatelessWidget {
   final Function increaseQuantity;
   final Function decreaseQuantity;
   final int itemPrice, itemQuantity;
-  final String itemImage, itemName, itemColor, itemSize;
-  const ItemsCard({super.key, required this.screenHeight, required this.screenWidth, required this.orientation, required this.increaseQuantity, required this.decreaseQuantity, required this.itemPrice, required this.itemImage, required this.itemName, required this.itemColor, required this.itemSize, required this.itemQuantity});
+  final String itemImage;
+  final String itemName;
+  final String itemColor;
+  final String itemSize;
+
+  const ItemsCard(
+      {super.key,
+      required this.screenHeight,
+      required this.screenWidth,
+      required this.orientation,
+      required this.increaseQuantity,
+      required this.decreaseQuantity,
+      required this.itemPrice,
+      required this.itemImage,
+      required this.itemName,
+      required this.itemColor,
+      required this.itemSize,
+      required this.itemQuantity});
 
   @override
   Widget build(BuildContext context) {
     if (orientation == Orientation.portrait){
       return Container(
-        margin: const EdgeInsets.only(bottom: 30),
-        height: screenHeight * 0.15,
-        width: screenWidth * 0.9,
+        margin: const EdgeInsets.only(bottom: 22),
+        height: screenHeight * 0.16,
+        //width: screenWidth * 0.20,
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(10.00),
+          borderRadius: BorderRadius.circular(8),
           boxShadow: [
             BoxShadow(
-              color: Colors.black12.withOpacity(0.05),
+              color: Colors.black12.withOpacity(0.25),
               blurStyle: BlurStyle.normal,
-              blurRadius: 20,
+              blurRadius: 6,
               spreadRadius: 2,
-              offset: const Offset(0, 2),
+              offset: const Offset(2, 2),
             )
           ],
         ),
@@ -40,8 +56,8 @@ class ItemsCard extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(10.00),
-                    bottomLeft: Radius.circular(10.00)),
-                color: const Color(0xFFE3E3E3),
+                    bottomLeft: Radius.circular(10.00),
+                ),
                 image: DecorationImage(
                     image:
                     NetworkImage(itemImage),
@@ -63,17 +79,11 @@ class ItemsCard extends StatelessWidget {
                           Text(
                             itemName,
                             style: const TextStyle(
-                              fontSize: 18,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          GestureDetector(
-                            onTap: (){},
-                            child: const Icon(
-                              Icons.more_vert,
-                              color: Colors.grey,
-                            ),
-                          )
+                         Icon(Icons.more_vert),
                         ],
                       ),
                     ),
@@ -120,7 +130,7 @@ class ItemsCard extends StatelessWidget {
                     ),
                     const Spacer(),
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 2),
+                      padding: const EdgeInsets.only(bottom: 1),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -158,7 +168,7 @@ class ItemsCard extends StatelessWidget {
       );
     } else {
       return Container(
-        margin: const EdgeInsets.only(bottom: 30),
+        margin: const EdgeInsets.only(bottom: 22),
         height: screenHeight * 0.40,
         width: screenWidth * 0.9,
         decoration: BoxDecoration(
@@ -183,12 +193,13 @@ class ItemsCard extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(10.00),
-                    bottomLeft: Radius.circular(10.00)),
-                color: const Color(0xFFE3E3E3),
+                    bottomLeft: Radius.circular(10.00),
+                ),
                 image: DecorationImage(
                     image:
                     NetworkImage(itemImage),
-                    fit: BoxFit.cover),
+                    fit: BoxFit.cover,
+                ),
               ),
             ),
             Expanded(

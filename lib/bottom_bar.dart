@@ -56,10 +56,10 @@ class BottomBar extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                     backgroundColor: buttonColor,
                     elevation: 5,
-                    shadowColor: Colors.red,
+                    shadowColor: Color(0xFFFF0000),
                     foregroundColor: Colors.white,
                     textStyle: const TextStyle(
-                        fontSize: 16, fontWeight: FontWeight.w400)),
+                        fontSize: 20, fontWeight: FontWeight.w400)),
                 onPressed: ()=> showSnackBar(),
                 child: const Text("CHECK OUT"),
               ),
@@ -110,7 +110,7 @@ class BottomBar extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFFFF0000),
                         elevation: 5,
-                        shadowColor: Colors.red.shade700,
+                        shadowColor: Color(0xFFFF0000),
                         foregroundColor: Colors.white,
                         textStyle: const TextStyle(
                             fontSize: 22, fontWeight: FontWeight.w500)),

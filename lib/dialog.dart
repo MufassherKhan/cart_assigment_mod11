@@ -45,7 +45,7 @@ class CartDialog extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                   backgroundColor: buttonColor,
                   elevation: 5,
-                  shadowColor: Colors.red,
+                  shadowColor: Color(0xFFFF0000),
                   foregroundColor: Colors.white,
                   textStyle: const TextStyle(
                       fontSize: 16, fontWeight: FontWeight.w400)),
@@ -85,7 +85,7 @@ class CartDialog extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                   backgroundColor: buttonColor,
                   elevation: 5,
-                  shadowColor: Colors.red,
+                  shadowColor: Color(0xFFFF0000),
                   foregroundColor: Colors.white,
                   textStyle: const TextStyle(
                       fontSize: 16, fontWeight:
