@@ -83,7 +83,7 @@ class ItemsCard extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                         Icon(Icons.more_vert),
+                         const Icon(Icons.more_vert),
                         ],
                       ),
                     ),
@@ -139,21 +139,24 @@ class ItemsCard extends StatelessWidget {
                             child: const QuantityButton(icon: Icons.remove,),
                           ),
                           Text(
-                            '${itemQuantity}',
+                            '$itemQuantity',
                             style: const TextStyle(fontSize: 18),
                           ),
                           GestureDetector(
                             onTap: () => increaseQuantity(),
-                            child: const QuantityButton(icon: Icons.add,),
+                            child: const QuantityButton(
+                              icon: Icons.add,
+                            ),
                           ),
                           const SizedBox(width: 10),
                           Padding(
                             padding: const EdgeInsets.all(8),
                             child: Text(
-                              "${itemPrice}\$",
+                              "$itemPrice\$",
                               style: const TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w600),
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
+                              ),
                             ),
                           ),
                         ],
@@ -284,7 +287,7 @@ class ItemsCard extends StatelessWidget {
                           ),
                           const SizedBox(width: 36),
                           Text(
-                            '${itemQuantity}',
+                            '$itemQuantity',
                             style: const TextStyle(fontSize: 20),
                           ),
                           const SizedBox(width: 36),
@@ -296,11 +299,12 @@ class ItemsCard extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(5),
                             child: Text(
-                              "${itemPrice}\$",
+                              "$itemPrice\$",
                               style: const TextStyle(
                                   fontSize: 20,
                                   fontWeight:
-                                  FontWeight.w600),
+                                  FontWeight.w600,
+                              ),
                             ),
                           ),
                         ],

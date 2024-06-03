@@ -10,10 +10,10 @@ class CartApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Online Bag',
-      home: const ShoppingBag(),
+      home: ShoppingBag(),
     );
   }
 }

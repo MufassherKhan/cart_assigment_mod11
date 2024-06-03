@@ -56,7 +56,7 @@ class BottomBar extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                     backgroundColor: buttonColor,
                     elevation: 5,
-                    shadowColor: Color(0xFFFF0000),
+                    shadowColor: const Color(0xFFFF0000),
                     foregroundColor: Colors.white,
                     textStyle: const TextStyle(
                         fontSize: 20, fontWeight: FontWeight.w400)),
@@ -110,7 +110,7 @@ class BottomBar extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFFFF0000),
                         elevation: 5,
-                        shadowColor: Color(0xFFFF0000),
+                        shadowColor: const Color(0xFFFF0000),
                         foregroundColor: Colors.white,
                         textStyle: const TextStyle(
                             fontSize: 22, fontWeight: FontWeight.w500)),
